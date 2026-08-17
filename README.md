@@ -1,16 +1,20 @@
-# React + Vite
+# Boot2Boot Hero — Tailwind migration
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This patch intentionally preserves the previous hero design and GSAP behavior. It does NOT redesign the hero.
 
-Currently, two official plugins are available:
+Changes:
+- Migrated hero/navbar/buttons/cards/background styling from hero.css to Tailwind utility classes.
+- Preserved the existing card positions, sizes, colors, rotations and GSAP behavior.
+- Added responsive Tailwind breakpoints at 1180px, 900px and 560px.
+- Removed the hero.css import from main.jsx.
+- Added Tailwind/PostCSS configuration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Install:
 
-## React Compiler
+npm install -D tailwindcss@3.4.17 postcss autoprefixer
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Then run:
 
-## Expanding the Oxlint configuration
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+The old CSS is kept as `src/styles/hero.css.previous-version` for comparison only and is not imported.
