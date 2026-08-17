@@ -23,14 +23,14 @@ export const campaignCards = [
     type: "website",
     title: "Campaign Landing Page",
     category: "WEB",
-    layer: "main",
+    layer: "back",
 
     rotate: -13,
     hoverRotate: -9,
 
     enter: {
-      x: -90,
-      y: -30,
+      x: -120,
+      y: -70,
     },
 
     float: {
@@ -42,8 +42,8 @@ export const campaignCards = [
     parallax: 7,
 
     scroll: {
-      x: -75,
-      y: -35,
+      x: -45,
+      y: -25,
     },
   },
 
@@ -52,14 +52,14 @@ export const campaignCards = [
     type: "performance",
     title: "Performance Creative",
     category: "ADS",
-    layer: "main",
+    layer: "back",
 
-    rotate: 18,
-    hoverRotate: 13,
+    rotate: 17,
+    hoverRotate: 12,
 
     enter: {
-      x: 100,
-      y: -45,
+      x: 120,
+      y: -55,
     },
 
     float: {
@@ -71,8 +71,8 @@ export const campaignCards = [
     parallax: 8,
 
     scroll: {
-      x: 85,
-      y: -30,
+      x: 50,
+      y: -20,
     },
   },
 
@@ -83,12 +83,12 @@ export const campaignCards = [
     category: "SHOP",
     layer: "front",
 
-    rotate: -8,
+    rotate: -9,
     hoverRotate: -4,
 
     enter: {
-      x: -70,
-      y: 45,
+      x: -90,
+      y: 30,
     },
 
     float: {
@@ -100,8 +100,37 @@ export const campaignCards = [
     parallax: 6,
 
     scroll: {
+      x: -55,
+      y: 45,
+    },
+  },
+
+  {
+    id: "strategy",
+    type: "strategy",
+    title: "Growth Strategy",
+    category: "STRATEGY",
+    layer: "front",
+
+    rotate: 8,
+    hoverRotate: 4,
+
+    enter: {
       x: -65,
-      y: 65,
+      y: 90,
+    },
+
+    float: {
+      y: 5,
+      rotation: -0.5,
+      duration: 6.4,
+    },
+
+    parallax: 6,
+
+    scroll: {
+      x: -40,
+      y: 60,
     },
   },
 
@@ -116,8 +145,8 @@ export const campaignCards = [
     hoverRotate: 6,
 
     enter: {
-      x: 75,
-      y: 55,
+      x: 95,
+      y: 75,
     },
 
     float: {
@@ -129,8 +158,8 @@ export const campaignCards = [
     parallax: 7,
 
     scroll: {
-      x: 75,
-      y: 65,
+      x: 55,
+      y: 55,
     },
   },
 ]

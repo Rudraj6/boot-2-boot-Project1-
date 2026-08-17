@@ -87,10 +87,16 @@ export default function Hero() {
       const wraps = gsap.utils.toArray(
         "[data-card-wrap]"
       )
-
+      
       const cards = gsap.utils.toArray(
         "[data-campaign-card]"
       )
+      
+      const mobileTrack = root.querySelector(
+        "[data-mobile-card-track]"
+      )
+      
+      let mobileCardLoop = null
 
       const primary = root.querySelector(
         "[data-magnetic]"
@@ -120,6 +126,52 @@ export default function Hero() {
 
 
       if (!reduced) {
+        /* =====================================================
+   MOBILE CARD TRACK
+   =====================================================
+
+   Desktop:
+   - No mobile animation.
+
+   Mobile:
+   - Five unique cards are duplicated once.
+   - The complete track moves from right → left.
+   - -50% brings the second identical group
+     into the exact starting position.
+   ===================================================== */
+
+const syncMobileCardLoop = () => {
+  if (!mobileTrack) return
+
+  mobileCardLoop?.kill()
+  mobileCardLoop = null
+
+  gsap.set(mobileTrack, {
+    xPercent: 0,
+  })
+
+  if (
+    reduced ||
+    isDesktopPointer()
+  ) {
+    return
+  }
+
+  mobileCardLoop = gsap.to(
+    mobileTrack,
+    {
+      xPercent: -50,
+
+      duration: 22,
+
+      ease: "none",
+
+      repeat: -1,
+    }
+  )
+}
+
+syncMobileCardLoop()
 
         gsap.set(nav, {
           y: -14,
@@ -286,6 +338,53 @@ export default function Hero() {
           y: 0,
         })
       }
+
+
+      /* =====================================================
+         MOBILE CARD TRACK
+         ===================================================== */
+
+      const syncMobileCardLoop = () => {
+
+        if (!mobileTrack) {
+          return
+        }
+
+        mobileCardLoop?.kill()
+        mobileCardLoop = null
+
+        gsap.set(mobileTrack, {
+          xPercent: 0,
+        })
+
+        if (
+          reduced ||
+          isDesktopPointer()
+        ) {
+          return
+        }
+
+        mobileCardLoop = gsap.to(
+          mobileTrack,
+          {
+            xPercent: -50,
+
+            duration: 22,
+
+            ease: "none",
+
+            repeat: -1,
+          }
+        )
+      }
+
+
+      syncMobileCardLoop()
+
+
+      /* =====================================================
+         SCROLL ANIMATION
+         ===================================================== */
 
 
       /* =====================================================
@@ -786,29 +885,21 @@ export default function Hero() {
         if (
           window.innerWidth >= 901
         ) {
-
+      
           nav?.setAttribute(
             "data-open",
             "false"
           )
-
+      
           menu?.setAttribute(
             "aria-expanded",
             "false"
           )
         }
-
-
-        /*
-         * Critical fix:
-         *
-         * When the viewport changes between
-         * desktop / tablet / mobile,
-         * tell ScrollTrigger that CSS layout
-         * has changed.
-         */
-
-        ScrollTrigger.refresh()
+      
+        requestAnimationFrame(() => {
+          ScrollTrigger.refresh()
+        })
       }
 
 
