@@ -1,0 +1,419 @@
+/* =========================================================
+   ABOUT SECTION
+   Boot 2 Boot
+   ========================================================= */
+
+   .about-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  
+    background: #f3f3e9;
+    color: #111111;
+  
+    padding: 140px 0 120px;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Container
+     --------------------------------------------------------- */
+  
+  .about-section__container {
+    width: min(1400px, calc(100% - 80px));
+    margin: 0 auto;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Intro
+     --------------------------------------------------------- */
+  
+  .about-section__intro {
+    position: relative;
+  }
+  
+  
+  .about-section__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    margin-bottom: 46px;
+  
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  
+  
+  .about-section__eyebrow-dot {
+    width: 9px;
+    height: 9px;
+  
+    border-radius: 50%;
+  
+    background: #b7ff2a;
+    border: 1px solid #111111;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Heading + description
+     --------------------------------------------------------- */
+  
+  .about-section__intro-grid {
+    display: grid;
+  
+    grid-template-columns:
+      minmax(0, 1.45fr)
+      minmax(320px, 0.75fr);
+  
+    gap: 80px;
+  
+    align-items: end;
+  }
+  
+  
+  .about-section__heading {
+    margin: 0;
+  
+    max-width: 900px;
+  
+    font-size: clamp(58px, 7vw, 112px);
+    line-height: 0.9;
+    letter-spacing: -0.065em;
+    font-weight: 700;
+  }
+  
+  
+  .about-section__heading span {
+    display: inline-block;
+  }
+  
+  
+  .about-section__description-wrap {
+    max-width: 430px;
+  
+    padding-bottom: 5px;
+  }
+  
+  
+  .about-section__description {
+    margin: 0 0 30px;
+  
+    font-size: 16px;
+    line-height: 1.55;
+    letter-spacing: -0.01em;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     CTA
+     --------------------------------------------------------- */
+  
+  .about-section__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    min-width: 190px;
+    min-height: 48px;
+  
+    padding: 7px 7px 7px 18px;
+  
+    color: #111111;
+    background: #b7ff2a;
+  
+    border: 1px solid #111111;
+    border-radius: 999px;
+  
+    text-decoration: none;
+  
+    font-size: 13px;
+    font-weight: 700;
+  
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+  
+  
+  .about-section__cta:hover {
+    transform: translateY(-3px);
+  
+    box-shadow:
+      5px 5px 0 #111111;
+  }
+  
+  
+  .about-section__cta-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 34px;
+    height: 34px;
+  
+    border-radius: 50%;
+  
+    background: #111111;
+    color: #ffffff;
+  
+    font-size: 17px;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Values heading
+     --------------------------------------------------------- */
+  
+  .about-section__values-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    margin-top: 120px;
+    margin-bottom: 18px;
+  
+    padding-bottom: 14px;
+  
+    border-bottom: 1px solid rgba(17, 17, 17, 0.25);
+  
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Cards
+     --------------------------------------------------------- */
+  
+  .about-section__cards {
+    display: grid;
+  
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  
+    gap: 14px;
+  }
+  
+  
+  .about-value-card {
+    position: relative;
+  
+    min-height: 310px;
+  
+    display: flex;
+    flex-direction: column;
+  
+    padding: 25px;
+  
+    background: #ffffff;
+  
+    border: 1px solid rgba(17, 17, 17, 0.22);
+    border-radius: 10px;
+  
+    box-shadow:
+      0 8px 30px rgba(183, 255, 42, 0.13);
+  
+    overflow: hidden;
+  
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      background-color 220ms ease;
+  }
+  
+  
+  .about-value-card:hover {
+    transform: translateY(-8px);
+  
+    background: #f8f8f1;
+  
+    box-shadow:
+      0 16px 40px rgba(183, 255, 42, 0.22);
+  }
+  
+  
+  /* Lime accent line */
+  
+  .about-value-card::before {
+    content: "";
+  
+    position: absolute;
+  
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 4px;
+  
+    background: #b7ff2a;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Card top
+     --------------------------------------------------------- */
+  
+  .about-value-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  
+  .about-value-card__number {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  
+    opacity: 0.55;
+  }
+  
+  
+  .about-value-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 30px;
+    height: 30px;
+  
+    border: 1px solid rgba(17, 17, 17, 0.45);
+    border-radius: 50%;
+  
+    font-size: 15px;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Card content
+     --------------------------------------------------------- */
+  
+  .about-value-card__content {
+    flex: 1;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .about-value-card__content h3 {
+    margin: 0 0 18px;
+  
+    font-size: clamp(27px, 2.2vw, 36px);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+  }
+  
+  
+  .about-value-card__content p {
+    margin: 0;
+  
+    max-width: 310px;
+  
+    font-size: 13px;
+    line-height: 1.5;
+  
+    color: rgba(17, 17, 17, 0.72);
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Card bottom
+     --------------------------------------------------------- */
+  
+  .about-value-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding-top: 18px;
+  
+    border-top: 1px solid rgba(17, 17, 17, 0.14);
+  
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  
+  
+  .about-value-card__bottom span:last-child {
+    font-size: 17px;
+    letter-spacing: 0;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Tablet
+     --------------------------------------------------------- */
+  
+  @media (max-width: 1000px) {
+  
+    .about-section {
+      padding: 100px 0;
+    }
+  
+    .about-section__container {
+      width: min(100% - 48px, 900px);
+    }
+  
+    .about-section__intro-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .about-section__description-wrap {
+      max-width: 600px;
+    }
+  
+    .about-section__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+  /* ---------------------------------------------------------
+     Mobile
+     --------------------------------------------------------- */
+  
+  @media (max-width: 640px) {
+  
+    .about-section {
+      padding: 80px 0;
+    }
+  
+    .about-section__container {
+      width: calc(100% - 32px);
+    }
+  
+    .about-section__eyebrow {
+      margin-bottom: 32px;
+    }
+  
+    .about-section__heading {
+      font-size: clamp(48px, 14vw, 76px);
+    }
+  
+    .about-section__description {
+      font-size: 15px;
+    }
+  
+    .about-section__values-header {
+      margin-top: 80px;
+    }
+  
+    .about-section__cards {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  
+    .about-value-card {
+      min-height: 280px;
+    }
+  
+  }
