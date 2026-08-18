@@ -1,8 +1,8 @@
 const layout = {
   // 1 — Top-left, partially outside the hero
   website: `
-left-0
-    right-0
+    left-[-20%]
+    right-[20%]
     mx-auto
     top-[-7%]
     w-[205px]
@@ -57,7 +57,8 @@ left-0
   // 5 — Bottom-right, intentionally clipped
   brand: `
     right-[12%]
-    bottom-[-12%]
+    bottom-[5%]
+    
     w-[205px]
     z-[8]
 
